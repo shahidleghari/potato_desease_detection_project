@@ -67,11 +67,23 @@ class _HomePageState extends State<HomePage> {
               'profile',
               () => imageWorks.showImageSourceDialog(context, 'profile',
                   (image) => _onPickImage('profile', image))),
-          child: CircleAvatar(
-            backgroundImage: widget.currentUser?.imageUrl != null
-                ? NetworkImage(widget.currentUser!.imageUrl!)
-                : null,
-            radius: avatarRadius,
+          child: StreamBuilder(
+            stream: FirebaseFirestore.instance
+                .collection('user')
+                .doc(FirebaseAuth.instance.currentUser!.uid)
+                .collection('data')
+                .snapshots(),
+            builder: (BuildContext context, snapshot) {
+              if (snapshot.connectionState == ConnectionState.active) {
+                return CircleAvatar(
+                  backgroundImage: snapshot.data!.docs[0]['image'] != null
+                      ? NetworkImage(snapshot.data!.docs[0]['image'])
+                      : null,
+                  radius: avatarRadius,
+                );
+              }
+              return const CircularProgressIndicator();
+            },
           ),
         ),
         actions: [
