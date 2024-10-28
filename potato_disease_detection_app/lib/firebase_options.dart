@@ -47,9 +47,9 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions web = FirebaseOptions(
-    apiKey: 'AIzaSyCm5n-CZ-EUbiMGeRnfjhW2rn1mr7-xgaY',
-    appId: '1:525169750657:web:818b26fe25039ea9379380',
-    messagingSenderId: '525169750657',
+    apiKey: '',
+    appId: '',
+    messagingSenderId: '',
     projectId: 'semester-project-a1285',
     authDomain: 'semester-project-a1285.firebaseapp.com',
     storageBucket: 'semester-project-a1285.appspot.com',
@@ -57,17 +57,17 @@ class DefaultFirebaseOptions {
   );
 
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyBWDpi9IZgQHB2yljcV25U28ksJK-RCu8k',
-    appId: '1:525169750657:android:cbbc2247364615ce379380',
-    messagingSenderId: '525169750657',
+    apiKey: '',
+    appId: '',
+    messagingSenderId: '',
     projectId: 'semester-project-a1285',
     storageBucket: 'semester-project-a1285.appspot.com',
   );
 
   static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyAM69f19tCDahvEEeVJr11er5v0QWY4SCw',
-    appId: '1:525169750657:ios:0c5ff88f0134b0ce379380',
-    messagingSenderId: '525169750657',
+    apiKey: '',
+    appId: '',
+    messagingSenderId: '',
     projectId: 'semester-project-a1285',
     storageBucket: 'semester-project-a1285.appspot.com',
     iosBundleId: 'com.example.potatoDiseaseDetectionApp',
